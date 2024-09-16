@@ -1,0 +1,52 @@
+body {
+    background-color: rgb(181, 199, 202);
+}
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+input {
+    border-radius: 10px;
+}
+#btn {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: skyblue;
+    color: white;
+    border-radius: 10px;
+
+}
+#container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card {
+    background-color: white;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    padding: 5px;
+    border-radius: 10px;
+    border: solid black 1px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.295);
+    margin: 10px;
+}
+.imgContainer {
+    width: 20vw;
+    height: 20vh;
+}
+.card:hover {
+    opacity: 0.8;
+    background-color: rgb(207, 216, 219);
+}
+@media (max-width: 768px) {
+    .card {
+        width: 100%; 
+    }
+}
