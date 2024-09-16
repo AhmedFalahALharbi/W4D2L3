@@ -2,6 +2,8 @@ let name1 = document.getElementById('name')
 let imgsrc = document.getElementById('imgsrc')
 let text = document.getElementById('text')
 let btn = document.getElementById('btn')
+let deletebcard = document.getElementById('deletebcard')
+let delBtn = document.getElementById('delBtn')
 
 btn.addEventListener('click' , ()=> {
     fetch('https://66e7e6bfb17821a9d9da7097.mockapi.io/image', {
@@ -44,12 +46,12 @@ fetch('https://66e7e6bfb17821a9d9da7097.mockapi.io/image')
         card.appendChild(imgContainer)
     });
 })
-deleteBtn.addEventListener('click', () => {
-    fetch(`https://66e7e6bfb17821a9d9da7097.mockapi.io/image/${item.id}`, {
+delBtn.addEventListener('click', () => {
+    fetch(`https://66e7e6bfb17821a9d9da7097.mockapi.io/image/${deletebcard.value}`, {
         method: 'DELETE',
     })
         .then(response => response.json())
         .then(() => {
-            card.remove(); // Remove the card from the DOM after deletion
+               card.remove();
         });
 });
