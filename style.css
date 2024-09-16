@@ -22,7 +22,7 @@ input {
 #delBtn {
     padding: 10px;
     margin-top: 10px;
-    background-color: rgb(235, 135, 135);
+    background-color: rgb(235, 135, 143);
     color: white;
     border-radius: 10px;
 }
@@ -54,6 +54,6 @@ input {
 }
 @media (max-width: 768px) {
     .card {
-        width: 100%; 
+        width: 70%; 
     }
 }

@@ -6,22 +6,27 @@ let deletebcard = document.getElementById('deletebcard')
 let delBtn = document.getElementById('delBtn')
 
 btn.addEventListener('click' , ()=> {
-    fetch('https://66e7e6bfb17821a9d9da7097.mockapi.io/image', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            name:name1.value,
-            image: imgsrc.value
-        }     
-        ),
-      })
+    if (name1.value.trim() === '' || imgsrc.value.trim() === '') {
+        text.textContent = "Please fill in all fields."; 
+    } else {
+        fetch('https://66e7e6bfb17821a9d9da7097.mockapi.io/image', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                name: name1.value,
+                image: imgsrc.value
+            })
+        })
         .then(response => response.json())
         .then(data => {
             text.textContent = "Img Uploaded";
-        })
-})
+            location.reload(); 
+        });
+    }
+});
+
 
 let container = document.getElementById('container')
 
